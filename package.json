@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
-  "name": "packing-template-handlebars",
-  "version": "1.0.0",
-  "description": "handlebars template middleware for express",
-=======
   "name": "packing-template-smarty",
   "version": "1.0.3",
   "description": "PHP smarty template middleware for express",
->>>>>>> origin/master
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,11 +24,7 @@
   "homepage": "https://github.com/zhongzhi107/packing-template-handlebars#readme",
   "dependencies": {
     "clear-require": "^1.0.1",
-<<<<<<< HEAD
-    "handlebars": "^4.0.5",
-=======
     "jsmart": "^2.14.0",
->>>>>>> origin/master
     "object-assign": "^4.1.0"
   }
 }
