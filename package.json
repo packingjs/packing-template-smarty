@@ -1,6 +1,6 @@
 {
   "name": "packing-template-smarty",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PHP smarty template middleware for express",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,6 @@
   "dependencies": {
     "clear-require": "^1.0.1",
     "jsmart": "^2.14.0",
-    "lodash": "^4.16.2"
+    "object-assign": "^4.1.0"
   }
 }

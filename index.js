@@ -2,12 +2,12 @@ var fs = require('fs');
 var path = require('path');
 var url = require('url');
 var util = require('util');
-var _ = require('lodash');
+var assign = require('object-assign');
 var clearRequire = require('clear-require');
 require('jsmart');
 
 module.exports = function(options) {
-  options = _.assignIn({
+  options = assign({
     encoding: 'utf-8',
     extension: '.tpl',
     templates: '.',
