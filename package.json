@@ -1,0 +1,31 @@
+{
+  "name": "packing-template-smarty",
+  "version": "1.0.2",
+  "description": "PHP smarty template middleware for express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhongzhi107/packing-template-smarty.git"
+  },
+  "keywords": [
+    "smarty",
+    "php",
+    "template",
+    "express",
+    "middleware"
+  ],
+  "author": "zhongzhi <zhong.zhi@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhongzhi107/packing-template-smarty/issues"
+  },
+  "homepage": "https://github.com/zhongzhi107/packing-template-smarty#readme",
+  "dependencies": {
+    "clear-require": "^1.0.1",
+    "jsmart": "^2.14.0",
+    "lodash": "^4.16.2"
+  }
+}
