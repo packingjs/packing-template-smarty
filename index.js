@@ -2,14 +2,14 @@ var fs = require('fs');
 var path = require('path');
 var url = require('url');
 var util = require('util');
-var _ = require('lodash');
+var assign = require('object-assign');
 var clearRequire = require('clear-require');
-require('jsmart');
+var Handlebars = require('handlebars');
 
 module.exports = function(options) {
-  options = _.assignIn({
+  options = assign({
     encoding: 'utf-8',
-    extension: '.tpl',
+    extension: '.hbs',
     templates: '.',
     mockData: '.',
     rewriteRules: {}
@@ -35,8 +35,8 @@ module.exports = function(options) {
           console.log('File "' + dataAbsPath + ' require failed.\n' + e);
         }
       }
-      var compiledTpl = new jSmart(tpl);
-      var output = compiledTpl.fetch(context);
+      var compiledTpl = Handlebars.compile(tpl);
+      var output = compiledTpl(context);
       res.end(output);
     } else {
       next();
