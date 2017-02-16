@@ -1,6 +1,6 @@
 {
   "name": "packing-template-smarty",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "PHP smarty template middleware for express",
   "main": "index.js",
   "scripts": {
