@@ -4,12 +4,12 @@ var url = require('url');
 var util = require('util');
 var assign = require('object-assign-deep');
 var clearRequire = require('clear-require');
-var Handlebars = require('handlebars');
+require('jsmart');
 
 module.exports = function(options) {
   options = assign({
     encoding: 'utf-8',
-    extension: '.hbs',
+    extension: '.tpl',
     templates: '.',
     globalData: '__global.js',
     mockData: '.',
@@ -44,7 +44,8 @@ module.exports = function(options) {
         }
         try {
           var compiledTpl = Handlebars.compile(tpl);
-          var output = compiledTpl(assign(globalContext, pageContext));
+          var output = compiledTpl();
+          var output = compiledTpl.fetch(assign(globalContext, pageContext));
           res.end(output);
         } catch (e) {
           console.log(e);

@@ -1,6 +1,6 @@
 {
   "name": "packing-template-smarty",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "PHP smarty template middleware for express",
   "main": "index.js",
   "scripts": {
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhongzhi107/packing-template-handlebars.git"
+    "url": "git+https://github.com/zhongzhi107/packing-template-smarty.git"
   },
   "keywords": [
-    "handlebars",
+    "smarty",
     "template",
     "express",
     "middleware"
@@ -19,9 +19,9 @@
   "author": "zhongzhi <zhong.zhi@163.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zhongzhi107/packing-template-handlebars/issues"
+    "url": "https://github.com/zhongzhi107/packing-template-smarty/issues"
   },
-  "homepage": "https://github.com/zhongzhi107/packing-template-handlebars#readme",
+  "homepage": "https://github.com/zhongzhi107/packing-template-smarty#readme",
   "dependencies": {
     "clear-require": "^1.0.1",
     "jsmart": "^2.14.0",
