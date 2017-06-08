@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhongzhi107/packing-template-smarty.git"
+    "url": "git+https://github.com/packingjs/packing-template-smarty.git"
   },
   "keywords": [
     "smarty",
@@ -19,9 +19,9 @@
   "author": "zhongzhi <zhong.zhi@163.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zhongzhi107/packing-template-smarty/issues"
+    "url": "https://github.com/packingjs/packing-template-smarty/issues"
   },
-  "homepage": "https://github.com/zhongzhi107/packing-template-smarty#readme",
+  "homepage": "https://github.com/packingjs/packing-template-smarty#readme",
   "dependencies": {
     "clear-require": "^1.0.1",
     "jsmart": "^2.14.0",
