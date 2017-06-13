@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from 'fs';
 import assign from 'object-assign-deep';
 import { getPath, getContext } from 'packing-template-util';
-import jsmart;
+import 'jsmart';
 
 module.exports = function(options) {
   options = assign({
