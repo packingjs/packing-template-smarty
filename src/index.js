@@ -1,10 +1,7 @@
-var fs = require('fs');
-var path = require('path');
-var url = require('url');
-var util = require('util');
-var assign = require('object-assign-deep');
-var clearRequire = require('clear-require');
-require('jsmart');
+import { existsSync, readFileSync } from 'fs';
+import assign from 'object-assign-deep';
+import { getPath, getContext } from 'packing-template-util';
+import jsmart;
 
 module.exports = function(options) {
   options = assign({
@@ -15,6 +12,24 @@ module.exports = function(options) {
     mockData: '.',
     rewriteRules: {}
   }, options);
+  return async (req, res, next) => {
+    const { templatePath, pageDataPath, globalDataPath } = getPath(req, options);
+    if (existsSync(templatePath)) {
+      const context = await getContext(req, res, pageDataPath, globalDataPath);
+      try {
+        const tpl = readFileSync(templatePath, { encoding: options.encoding });
+        const compiledTpl = new jSmart(tpl);
+        const output = compiledTpl.fetch(context);
+        res.end(output);
+      } catch (e) {
+        console.log(e);
+        next();
+      }
+    } else {
+      next();
+    }
+  };
+
   return function(req, res, next) {
     var urlObject = url.parse(req.url);
     var pathname = options.rewriteRules[urlObject.pathname] || urlObject.pathname;
