@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from 'fs';
+import { resolve } from 'path';
 import assign from 'object-assign-deep';
 import { getPath, getContext } from 'packing-template-util';
 import 'jsmart';
@@ -33,9 +34,9 @@ module.exports = function(options) {
   return function(req, res, next) {
     var urlObject = url.parse(req.url);
     var pathname = options.rewriteRules[urlObject.pathname] || urlObject.pathname;
-    var templateAbsPath = path.resolve(path.join(options.templates, pathname));
-    var dataAbsPath = path.resolve(path.join(options.mockData, pathname.replace(options.extension, '.js')));
-    var globalDataPath = path.resolve(path.join(options.mockData, options.globalData));
+    var templateAbsPath = resolve(path.join(options.templates, pathname));
+    var dataAbsPath = resolve(path.join(options.mockData, pathname.replace(options.extension, '.js')));
+    var globalDataPath = resolve(path.join(options.mockData, options.globalData));
     if (fs.existsSync(templateAbsPath)) {
       var tpl = fs.readFileSync(templateAbsPath, {encoding: options.encoding});
       if (fs.existsSync(templateAbsPath)) {
